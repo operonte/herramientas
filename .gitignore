@@ -1,0 +1,7 @@
+# Archivos de trabajo del generador: tipografías descargadas, recortes,
+# capturas del emulador, vistas previas y respaldos de folletos anteriores.
+# Pesan ~18 MB y se regeneran solos.
+folletos/work/
+
+__pycache__/
+*.pyc

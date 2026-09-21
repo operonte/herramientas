@@ -1,0 +1,65 @@
+R = '/home/cristian/X/Github/'
+H = '/home/cristian/X/Github/herramientas/folletos/work/emu/shots/logos_'
+CFG = {
+ 'slug': 'logos', 'name': 'LOGOS', 'project_dir': 'logos',
+ 'tagline': 'Aprende idiomas mediante lectura graduada.',
+ 'tagline_plain': 'Aprende idiomas mediante lectura graduada',
+ 'chips': ['4 idiomas', 'Lectura A0 a C2', 'Práctica'],
+ 'foot': 'aprende idiomas leyendo',
+ 'colors': {'dark': '#0D47A1', 'mid': '#2F74D0', 'accent': '#7B1FA2', 'bg': '#f7f9fe', 'ink': '#141b2d', 'mute': '#55607a', 'line': '#dfe6f5'},
+ 'icon_prep': {'src': '/home/cristian/X/Github/herramientas/folletos/work/img/logos_icon_src.png'},
+ 'feature_src': None,
+ 'capturas': [H+'a1_home.png', H+'b2_stories.png', H+'b3_reader.png', H+'b4_quiz.png', H+'b5_quiz_answer.png', H+'c2_lesson.png', H+'c3_exercise.png', H+'c4_feedback.png', H+'d1_languages.png', H+'e1_home_hebrew.png', H+'e2_practice_hebrew.png', H+'e3_alefato.png', H+'f1_dark_home.png'],
+ 'intro': 'LOGOS es una app para **aprender idiomas leyendo**. Eliges tu idioma de estudio y practicas con lecturas graduadas por nivel, cuestionarios de comprensión y lecciones con ejercicios corregidos al instante. La interfaz está en español y cada idioma tiene su propio color.',
+ 'cards': [
+  {'title': 'Qué incluye', 'items': [
+    'Cuatro idiomas de estudio: **inglés, portugués, hebreo bíblico y griego koiné**',
+    '**Lectura graduada** en inglés: 68 historias, de nivel A0 a C2',
+    'Cada historia trae su **cuestionario** de comprensión',
+    'Lecciones de práctica: abecedario, vocales y vocabulario básico',
+    'Ejercicios con corrección inmediata y barra de progreso',
+    'Historias con el título en español y el texto en el idioma que estudias']},
+  {'title': 'Pensada para estudiar', 'items': [
+    'La interfaz siempre en español; el idioma que eliges es el que estudias',
+    'Cada idioma tiene su color, para saber de un vistazo dónde estás',
+    'Alfabeto hebreo (alefato) y vocales (niqqud) explicados paso a paso',
+    'Modo claro u oscuro, según la configuración de tu celular',
+    'Sin registro ni cuentas: la abres y empiezas a estudiar',
+    'Hoy: lectura en inglés y práctica en los 4 idiomas. Próximamente: lecturas en los demás']},
+ ],
+ 'values': [
+  {'title': 'Lectura por niveles', 'text': 'De A0 a C2, para avanzar a tu ritmo.'},
+  {'title': 'Corrección al instante', 'text': 'Sabes de inmediato si acertaste.'},
+  {'title': 'Cuatro idiomas', 'text': 'Incluye hebreo bíblico y griego koiné.'}],
+ 'cta': {'title': 'Conócela', 'text': 'LOGOS aún no está en Google Play. Su código y su documentación están publicados en GitHub.'},
+ 'gallery': {'kicker': 'Así se ve', 'title': 'La app, pantalla por pantalla', 'subtitle': 'Pantallas de LOGOS en funcionamiento, sin datos inventados ni retoques.',
+  'shots': [
+   {'img': H+'a1_home.png', 'title': 'Inicio', 'text': 'Tu idioma de estudio y el acceso a la lectura.'},
+   {'img': H+'b2_stories.png', 'title': 'Historias por nivel', 'text': 'Elige una historia del nivel que quieres practicar.'},
+   {'img': H+'b3_reader.png', 'title': 'Lectura', 'text': 'Texto limpio y cómodo, con el título en español.'},
+   {'img': H+'b5_quiz_answer.png', 'title': 'Cuestionario', 'text': 'Preguntas de comprensión con respuesta inmediata.'},
+   {'img': H+'c4_feedback.png', 'title': 'Ejercicios', 'text': 'Lecciones cortas, corregidas al instante.'},
+   {'img': H+'d1_languages.png', 'title': 'Idiomas', 'text': 'Inglés, portugués, hebreo bíblico y griego koiné.'},
+   {'img': H+'e3_alefato.png', 'title': 'Hebreo bíblico', 'text': 'El alefato, paso a paso.'},
+   {'img': H+'f1_dark_home.png', 'title': 'Modo oscuro', 'text': 'Sigue el tema de tu celular.'}]},
+ 'guide': {'title': 'Cómo se usa, paso a paso', 'subtitle': 'De elegir tu idioma a practicar con ejercicios.',
+  'steps': [
+   {'title': 'Elige tu idioma', 'text': 'En la pestaña «Idioma» escoge qué quieres estudiar. La app cambia de color según el idioma.', 'img': H+'d1_languages.png'},
+   {'title': 'Lee una historia', 'text': 'En «Lectura» elige un nivel, de A0 a C2, y una historia. El texto está en el idioma que estudias.', 'img': H+'b3_reader.png'},
+   {'title': 'Responde el cuestionario', 'text': 'Al final de cada historia hay preguntas de comprensión. Marcas tu respuesta y ves si acertaste.', 'img': H+'b5_quiz_answer.png'},
+   {'title': 'Practica con ejercicios', 'text': 'En «Práctica» hay lecciones cortas de abecedario, vocales y vocabulario, con corrección inmediata.', 'img': H+'c4_feedback.png'}],
+  'tips': [
+   {'title': 'Hoy y próximamente', 'text': 'Hoy hay lectura en inglés y práctica en los cuatro idiomas. Las lecturas en portugués, hebreo y griego llegarán próximamente.'},
+   {'title': 'Tu ritmo', 'text': 'Cada lección tiene su barra de progreso y puedes repetirla cuando quieras.'},
+   {'title': 'Sin cuentas', 'text': 'No necesitas registrarte: abres la app y empiezas.'}]},
+ 'install': {'mode': 'repo', 'repo': 'https://github.com/operonte/logos', 'release': False,
+  'title': 'Consulta el proyecto en GitHub', 'title_page': 'Cómo obtenerla', 'sub_page': 'LOGOS todavía no está publicada en Google Play. Su código fuente y su documentación están disponibles en GitHub.',
+  'text': 'El proyecto está publicado en GitHub, con su código fuente y su documentación. Por ahora **no hay una versión instalable lista para descargar**; si quieres probarla, puedes compilarla desde el repositorio con Flutter.',
+  'icon': '↗',
+  'note': 'Conoce más proyectos de Cristian Bravo en cristianbravo-dev.web.app.',
+  'tips': [
+   {'title': 'Hecha con Flutter', 'text': 'El mismo código funciona en Android, iOS y web.'},
+   {'title': 'Código abierto', 'text': 'Puedes revisar cómo está hecha y proponer mejoras.'},
+   {'title': 'Versión 1.0', 'text': 'Las lecturas de otros idiomas aparecen en la app como «Próximamente».'}],
+  'closing': 'Aprende leyendo.'},
+}
