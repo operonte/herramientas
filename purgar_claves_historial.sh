@@ -23,8 +23,10 @@ for d in Holyapp preciobencina coroapp misionapp sosapp; do
 
   # Claves reales que aparecen en el historial, solo desde los archivos de config
   # (dentro de los APK el patrón da falsos positivos).
-  git grep -ohE "AIza[A-Za-z0-9_-]{35}" $(git rev-list --all) \
-      -- "*google-services.json" "*firebase_options.dart" 2>/dev/null \
+  # `|| true`: git grep devuelve 1 cuando no hay coincidencias y con `set -e`
+  # eso cortaría el script en un repo ya limpio.
+  { git grep -ohE "AIza[A-Za-z0-9_-]{35}" $(git rev-list --all) \
+      -- "*google-services.json" "*firebase_options.dart" 2>/dev/null || true; } \
     | sort -u | sed 's/$/==>***REMOVED-SECRET***/' > "$T/claves.txt"
 
   if [ ! -s "$T/claves.txt" ]; then
@@ -39,8 +41,8 @@ for d in Holyapp preciobencina coroapp misionapp sosapp; do
 
   git remote add origin "$url" 2>/dev/null || git remote set-url origin "$url"
 
-  quedan=$(git grep -ohE "AIza[A-Za-z0-9_-]{35}" $(git rev-list --all) \
-           -- "*google-services.json" "*firebase_options.dart" 2>/dev/null | wc -l)
+  quedan=$({ git grep -ohE "AIza[A-Za-z0-9_-]{35}" $(git rev-list --all) \
+             -- "*google-services.json" "*firebase_options.dart" 2>/dev/null || true; } | wc -l)
   echo "$d: claves restantes=$quedan  commits=$(git rev-list --all --count)  .git=$(du -sh .git | cut -f1)"
   [ "$quedan" -eq 0 ] || { echo "  >>> $d NO quedó limpio, revisa antes de subir"; exit 1; }
 done
