@@ -9,7 +9,10 @@ CFG = {
  'chips': ['Android · iOS · Linux · Web'],
  'foot': 'tareas, notas, asistencia y reuniones, todo en un solo lugar',
  'colors': {'dark': '#115E59', 'mid': '#26938A', 'accent': '#C2570C', 'bg': '#fafaf9', 'ink': '#1c1917', 'mute': '#57534e', 'line': '#e7e5e4'},
+ # El ícono y el gráfico destacado ya existen: se apuntan a sí mismos para que una
+ # corrida completa los reescriba igual en vez de generar unos nuevos y perder los reales.
  'icon_prep': {'src': R + 'Bitacora/presentacion/icono-512.png'},
+ 'feature_src': R + 'Bitacora/presentacion/grafico-destacado-1024x500.png',
  'capturas': [],
  'intro': 'Bitácora organiza la vida académica de un curso completo: cada estudiante ve sus propias tareas y las que comparte con su clase, y cada docente tiene un panel propio para evaluar, tomar asistencia y detectar a tiempo quién se está atrasando. Funciona para cualquier carrera o institución, sin configuración especial.',
  'cards': [

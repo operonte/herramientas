@@ -65,7 +65,6 @@ def render(slug, cfg, pres):
     info = subprocess.run(['pdfinfo', str(pdf)], capture_output=True, text=True).stdout
     pages = [l for l in info.splitlines() if l.startswith('Pages')][0]
     print(f'{slug}: PDF OK — {pages.strip()} — {pdf.stat().st_size // 1024} KB — previews en {prev}')
-    print('carpeta:', pres)
 
 
 def main():
@@ -80,7 +79,9 @@ def main():
         pres.mkdir(parents=True, exist_ok=True)
     if '--solo-pdf' in sys.argv:
         cfg['icon'] = str(pres / 'icono-512.png')
-        return render(slug, cfg, pres)
+        render(slug, cfg, pres)
+        print('carpeta:', pres)
+        return
     # 1) ícono
     ic = cfg['icon_prep']
     prep_icon(ic['src'], pres / 'icono-512.png', ic.get('inset', 0.0), ic.get('bg'), ic.get('black_to_alpha', False))
